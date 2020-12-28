@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://chanwingfung.com/authors/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://chanwingfung.com/pt-br/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://chanwingfung.com/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://chanwingfung.com/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://chanwingfung.com/pt-br/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://chanwingfung.com/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://chanwingfung.com/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://chanwingfung.com/pt-br/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://chanwingfung.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://chanwingfung.com/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://chanwingfung.com/pt-br/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://chanwingfung.com/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://chanwingfung.com/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://chanwingfung.com/pt-br/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://chanwingfung.com/tags/"
+                />
+  </url>
+  
+</urlset>
