@@ -15,11 +15,11 @@ pygmentsCodeFencesGuessSyntax = true
 disqusShortname = "yourdiscussshortname"
 
 [params]
-    author = "John Doe"
-    description = "John Doe's personal website"
+    author = "Ringo Chan"
+    description = "Ringo Chan's personal website"
     keywords = "blog,developer,personal"
     info = "Full Stack DevOps and Magician"
-    avatarURL = "images/avatar.jpg"
+    avatarURL = "images/ringo.jpg"
     #gravatar = "john.doe@example.com"
     footerContent = "Enter a text here."
 
