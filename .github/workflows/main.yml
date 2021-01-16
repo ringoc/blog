@@ -28,7 +28,20 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: peaceiris/actions-hugo@2e89aa66d0093e4cd14751b3028fc1a179452c2e
         uses: peaceiris/actions-hugo@v2.4.13
-      - run: ./deploy.sh
+      - name: Build
+        # remove --minify tag if you do not need it
+        # docs: https://gohugo.io/hugo-pipes/minification/
+        run: hugo -t hugo-coder  
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.TOKEN }}
+          external_repository: ringoc/ringoc.github.io
+          publish_dir: ./public
+          #   keep_files: true
+          user_name: ringoc
+          user_email: <ringo@furi.co>
+          publish_branch: main
 
       # Runs a single command using the runners shell
 #       - name: Run a one-line script
