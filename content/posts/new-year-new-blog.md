@@ -10,7 +10,6 @@ categories = []
 externalLink = ""
 series = []
 +++
-# New Year New Blog
 2020 has been a very special and challenging year. By working remotely throughout the year, a lot of thing has been changed such as new working environment, new projects, and most importantly new work-life balance.
 I am very lucky to find this work very well myself. 
 
