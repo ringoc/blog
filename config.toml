@@ -1,4 +1,4 @@
-baseURL = "http://chanwingfung.com"
+baseURL = "http://ringoc.github.io"
 title = "Ringo Chan"
 
 theme = "hugo-coder"
@@ -16,9 +16,9 @@ disqusShortname = "yourdiscussshortname"
 
 [params]
     author = "Ringo Chan"
-    description = "Ringo Chan's personal website"
+    description = "Ringo Chan's Blog"
     keywords = "blog,developer,personal"
-    info = "Full Stack DevOps and Magician"
+    info = "DevOps Engineer and Magician"
     avatarURL = "images/ringo.jpg"
     #gravatar = "john.doe@example.com"
     footerContent = "Enter a text here."
@@ -90,32 +90,27 @@ disqusShortname = "yourdiscussshortname"
     name = "Github"
     icon = "fa fa-github"
     weight = 1
-    url = "https://github.com/johndoe/"
-[[params.social]]
-    name = "Gitlab"
-    icon = "fa fa-gitlab"
-    weight = 2
-    url = "https://gitlab.com/johndoe/"
+    url = "https://github.com/ringoc/"
 [[params.social]]
     name = "Twitter"
     icon = "fa fa-twitter"
     weight = 3
-    url = "https://twitter.com/johndoe/"
+    url = "https://twitter.com/wingfchan/"
 [[params.social]]
     name = "LinkedIn"
     icon = "fa fa-linkedin"
     weight = 4
-    url = "https://www.linkedin.com/in/johndoe/"
+    url = "https://www.linkedin.com/in/ringochan/"
 [[params.social]]
     name = "Medium"
     icon = "fa fa-medium"
     weight = 5
-    url = "https://medium.com/@johndoe"
+    url = "https://medium.com/@ringochan"
 [[params.social]]
     name = "RSS"
     icon = "fa fa-rss"
     weight = 6
-    url = "https://myhugosite.com/index.xml"
+    url = "https://ringoc.github.io/index.xml"
     rel = "alternate"
     type = "application/rss+xml"
 
