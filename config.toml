@@ -60,9 +60,6 @@ disqusShortname = "yourdiscussshortname"
     # Custom JS
     customJS = []
 
-    showComments = false
-
-
 # If you want to use fathom(https://usefathom.com) for analytics, add this section
 [params.fathomAnalytics]
     siteID = "ABCDE"
