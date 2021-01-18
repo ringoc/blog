@@ -12,7 +12,7 @@ pygmentsStyle = "b2"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 
-disqusShortname = "yourdiscussshortname"
+disqusShortname = "ringoc"
 
 [params]
     author = "Ringo Chan"
