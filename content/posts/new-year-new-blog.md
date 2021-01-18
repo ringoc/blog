@@ -15,7 +15,7 @@ I am very lucky to find this work very well myself.
 
 Not only I can work much more productive, but also have chance to take a pause to think out of the box. I found myself more outgoing and enjoy sharing my knowledge and experience. To be able to better present myself is one of the best gain in 2020. 
 
-![Github 2020](../../static/images/github-2020.png)
+![Github 2020](../../images/github-2020.png)
 
 This is also the reason I started this blog. I would like to use this as a dairy to keep a record of my work and idea. 
 
