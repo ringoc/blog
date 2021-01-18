@@ -12,7 +12,7 @@ pygmentsStyle = "b2"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 
-disqusShortname = "ringoc"
+disqusShortname = "yourdiscussshortname"
 
 [params]
     author = "Ringo Chan"
@@ -59,6 +59,9 @@ disqusShortname = "ringoc"
 
     # Custom JS
     customJS = []
+
+    showComments = false
+
 
 # If you want to use fathom(https://usefathom.com) for analytics, add this section
 [params.fathomAnalytics]
