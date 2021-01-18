@@ -1,14 +1,14 @@
 ---
-draft = false
-date = 2021-01-17T12:02:05Z
-title = "New Year New Blog"
-description = "A special year 2021 with brand new jourey."
-slug = "new-year-new-blog"
-authors = ["ringoc"]
-tags = []
-categories = []
-externalLink = ""
-series = []
+draft : false
+date : 2021-01-17T12:02:05Z
+title : "New Year New Blog"
+description : "A special year 2021 with brand new jourey."
+slug : "new-year-new-blog"
+authors : ["ringoc"]
+tags : []
+categories : []
+externalLink : ""
+series : []
 ---
 2020 has been a very special and challenging year. By working remotely throughout the year, a lot of thing has been changed such as new working environment, new projects, and most importantly new work-life balance.
 I am very lucky to find this work very well myself. 
