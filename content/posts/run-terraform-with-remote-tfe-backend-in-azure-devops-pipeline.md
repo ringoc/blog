@@ -2,11 +2,12 @@
 draft = false
 date = 2021-01-20T21:25:59+11:00
 title = "Run Terraform with remote TFE backend in Azure DevOps Pipeline"
-description = "Run Terraform with remote TFE backend in Azure DevOps Pipeline
+description = "Run Terraform with remote TFE backend in Azure DevOps Pipeline"
 slug = ""
 authors = ["ringoc"]
 tags = ["terraform","azure pipeline"]
 categories = ["cloud"]
+
 externalLink = ""
 series = []
 +++
