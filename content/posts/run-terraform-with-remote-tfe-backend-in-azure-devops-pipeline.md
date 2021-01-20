@@ -61,23 +61,26 @@ With the above assumptions, the following steps are required.
 ## Step 1 — Retrieve TFE workspace Terraform version
 
 As the Azure DevOps pipeline built-in Terraform task is always keep up to date, this may not match the Terraform Enterprise workspace version. It is the best to use the same version of Terraform between the runtime and workspace. To retrieve the [Terraform workspace version](https://www.terraform.io/docs/cloud/api/workspaces.html), we can fire up a CURL command in BASH with correct HTTP header. The return JSON will then selected by jq . e.g.
-
-    curl -sS --insecure \
-             --header "Authorization: Bearer <tfeToken>" \ 
-             --header "Content-Type: application/vnd.api+json" \    "https://<tfeHost>/api/v2/organizations/<tfeOrg>/workspaces/<tfeWorkspace>" 
+```shell
+curl -sS --insecure \
+         --header "Authorization: Bearer <tfeToken>" \ 
+         --header "Content-Type: application/vnd.api+json" \    
+         "https://<tfeHost>/api/v2/organizations/<tfeOrg>/workspaces/<tfeWorkspace>" \
     | jq -r '.data.attributes["terraform-version"]'
 
+```
+    
 We stored the version in the local variable and then pass it to the next step.
 
 ## Step 2 — Install Terraform version matching workspace version
 
 Once the version is found, call a TerraformInstall task to install custom Terraform runtime.
-
-    **task**: TerraformInstaller@0     
-    **displayName**: 'Install Terraform'     
-    **inputs**:       
-      **terraformVersion**: <tfVersion>
-
+```yaml
+task: TerraformInstaller@0     
+displayName: 'Install Terraform'     
+inputs:       
+  terraformVersion: <tfVersion>
+```
 ## Step 3 – Generate Terraform CLI config and backend config
 
 Since running Terraform remote backend, there are a few limitations:
@@ -89,87 +92,97 @@ Since running Terraform remote backend, there are a few limitations:
 We need to dynamically generate the CLI and backend config on the fly by replacing the TFE host, organization, workspace prefix in the backend config. and TFE host and token in the CLI config.
 
 *.config/backend.hcl*
-
-    hostname     = "__ptfeHost__"
-    organization = "__ptfeOrg__"
-    workspaces  {
-      prefix = "__tla__-"
-    }
+```yaml
+hostname     = "__ptfeHost__"
+organization = "__ptfeOrg__"
+workspaces  {
+  prefix = "__tla__-"
+}
+```
 
 *.config/credentials.tfrc.json*
-
-    {
-      "credentials": {
-        "__ptfeHost__": {
-          "token": "__ptfeToken__"
-        }
-      }
+```yaml
+{
+  "credentials": {
+    "__ptfeHost__": {
+      "token": "__ptfeToken__"
     }
+  }
+}
+```
 
 *azure-pipeline.yaml*
+```yaml
+bash: |       
+  cp ./tf/env/<env>.auto.tfvars ./tf    
+  sed -i 's/__tfeHost__/<tfeHost>/' ./tf/.config/backend.hcl       
+  sed -i 's/__tfeOrg__/<tfeOrg>/' ./tf/.config/backend.hcl       
+  sed -i 's/__tfeWorkspace__/<tfeWorkspace>/' ./tf/.config/backend.hcl       
+  sed -i 's/__tfeHost__/<tfeHost>/' ./tf/.config/credentials.tfrc.json         
+  sed -i 's/__tfeToken__/<tfeToken>/'            ./tf/.config/credentials.tfrc.json     
+displayName: 'Create TF CLI Config File'     
+env:       
+  TFE_TOKEN: <tfToken> # passed as secret variables
+```
 
-    **bash**: |       
-      cp ./tf/env/<env>.auto.tfvars ./tf    
-      sed -i 's/__tfeHost__/<tfeHost>/' ./tf/.config/backend.hcl       
-      sed -i 's/__tfeOrg__/<tfeOrg>/' ./tf/.config/backend.hcl       
-      sed -i 's/__tfeWorkspace__/<tfeWorkspace>/' ./tf/.config/backend.hcl       
-      sed -i 's/__tfeHost__/<tfeHost>/' ./tf/.config/credentials.tfrc.json         
-      sed -i 's/__tfeToken__/<tfeToken>/'            ./tf/.config/credentials.tfrc.json     
-    **displayName**: 'Create TF CLI Config File'     
-    **env**:       
-      **TFE_TOKEN**: <tfToken> *# passed as secret variables*
 
 ## Step 4 – Terraform init with backend config
 
 Once CLI and backend config is generated. Run terraform init with custom backend config, and a couple of runtime variables.
-
-    bash: |       
-      DIRECTORY="./tf"       
-      cd $DIRECTORY       
-      TF_WORKSPACE=<tfeWorkspace> \
-      TF_CLI_CONFIG_FILE=.config/credentials.tfrc.json \
-      terraform init -backend-config=.config/backend.hcl     displayName: 'TFE Init'\
+```yaml
+bash: |       
+  DIRECTORY="./tf"       
+  cd $DIRECTORY       
+  TF_WORKSPACE=<tfeWorkspace> \
+  TF_CLI_CONFIG_FILE=.config/credentials.tfrc.json \
+  terraform init -backend-config=.config/backend.hcl     
+displayName: 'TFE Init'\
+```
+    
 
 ## Step 5 – Terraform apply with correct CLI and backend config
 
 Same for applying the terraform
-
-    bash: |       
-      DIRECTORY="./tf"       
-      cd $DIRECTORY       
-      TF_WORKSPACE=<tfeWorkspace> \    
-      TF_CLI_CONFIG_FILE=.config/credentials.tfrc.json \
-      terraform plan 
-      TF_WORKSPACE=<tfeWorkspace> \
-      TF_CLI_CONFIG_FILE=./.config/credentials.tfrc.json \
-      terraform show -json > output-state.json       
-      cat output-state.json | jq '.' | less     
-    displayName: 'TFE Apply'
+```yaml
+bash: |       
+  DIRECTORY="./tf"       
+  cd $DIRECTORY       
+  TF_WORKSPACE=<tfeWorkspace> \    
+  TF_CLI_CONFIG_FILE=.config/credentials.tfrc.json \
+  terraform plan 
+  TF_WORKSPACE=<tfeWorkspace> \
+  TF_CLI_CONFIG_FILE=./.config/credentials.tfrc.json \
+  terraform show -json > output-state.json       
+  cat output-state.json | jq '.' | less     
+displayName: 'TFE Apply'
+```
 
 ## Step 6 – Archive the plan as an artifact
 
 As a requirement for change management, the plan/apply output are exported and packaged up as a GZIP file.
-
-    task: ArchiveFiles@2     
-      inputs:       
-        rootFolderOrFile: '$(Build.SourcesDirectory)'            
-        includeRootFolder: false       
-        archiveType: 'tar'       
-        tarCompression: 'gz'       
-        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).tfplan.tgz'       
-        replaceExistingArchive: true       
-    displayName: 'Create Plan Artifact'
+```yaml
+task: ArchiveFiles@2     
+  inputs:       
+    rootFolderOrFile: '$(Build.SourcesDirectory)'            
+    includeRootFolder: false       
+    archiveType: 'tar'       
+    tarCompression: 'gz'       
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).tfplan.tgz'       
+    replaceExistingArchive: true       
+displayName: 'Create Plan Artifact'
+```
 
 ## Step 7 – Publish to the artifact container
 
 Once the GZIP is created, publish to Azure DevOps artifact
-
-    task: PublishBuildArtifacts@1     
-      inputs:       
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)'       
-        ArtifactName: '$(Build.BuildId).tf.enterprise.plan'           
-        publishLocation: 'Container'       
-    displayName: 'Publish Plan Artifact'
+```yaml
+task: PublishBuildArtifacts@1     
+  inputs:       
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'       
+    ArtifactName: '$(Build.BuildId).tf.enterprise.plan'           
+    publishLocation: 'Container'       
+displayName: 'Publish Plan Artifact'
+```
 
 ## Summary
 
