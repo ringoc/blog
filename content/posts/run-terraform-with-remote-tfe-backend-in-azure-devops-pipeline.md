@@ -14,7 +14,7 @@ series = []
 
 # Run Terraform with remote TFE backend in Azure DevOps Pipeline
 
-Background
+## Background
 
 Recently I worked in a project in large enterprise cloud migration project which using Azure DevOps Pipeline (YAML) as the core CD/CI pipeline which integrate Github repository as the source of truth, Terraform Enterprise workspace performing the IaC workload and Azure AD for IAM.
 
