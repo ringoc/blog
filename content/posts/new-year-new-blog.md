@@ -18,6 +18,6 @@ Not only I can work much more productive, but also have chance to take a pause t
 
 ![Github 2020](../../images/github-2020.png)
 
-This is also the reason I started this blog. I would like to use this as a dairy to keep a record of my work and idea. 
+This is also the reason I started this blog. I would like to use this as a diary to keep a record of my work and idea. 
 
 Welcome 2021, I can't wait to check this space again at the end of year. 
