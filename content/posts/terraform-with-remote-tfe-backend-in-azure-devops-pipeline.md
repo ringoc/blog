@@ -7,12 +7,10 @@ slug = ""
 authors = ["ringoc"]
 tags = ["terraform","azure pipeline"]
 categories = ["cloud"]
-disableComments: true
+disableComments = true
 externalLink = ""
 series = []
 +++
-
-# Run Terraform with remote TFE backend in Azure DevOps Pipeline
 
 ## Background
 
