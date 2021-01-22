@@ -7,7 +7,7 @@ slug = ""
 authors = ["ringoc"]
 tags = ["terraform","azure pipeline"]
 categories = ["cloud"]
-
+disableComments: true
 externalLink = ""
 series = []
 +++
