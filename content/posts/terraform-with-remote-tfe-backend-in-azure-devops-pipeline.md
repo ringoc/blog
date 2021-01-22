@@ -93,8 +93,8 @@ We need to dynamically generate the CLI and backend config on the fly by replaci
 
 *.config/backend.hcl*
 ```yaml
-hostname     = "__ptfeHost__"
-organization = "__ptfeOrg__"
+hostname     = "__tfeHost__"
+organization = "__tfeOrg__"
 workspaces  {
   prefix = "__tla__-"
 }
@@ -104,8 +104,8 @@ workspaces  {
 ```yaml
 {
   "credentials": {
-    "__ptfeHost__": {
-      "token": "__ptfeToken__"
+    "__tfeHost__": {
+      "token": "__tfeToken__"
     }
   }
 }
