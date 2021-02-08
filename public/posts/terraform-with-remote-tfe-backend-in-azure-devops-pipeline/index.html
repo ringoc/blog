@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Ringo Chan">
+    <meta name="description" content="Run Terraform with remote TFE backend in Azure DevOps Pipeline">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Run Terraform with remote TFE backend in Azure DevOps Pipeline"/>
+<meta name="twitter:description" content="Run Terraform with remote TFE backend in Azure DevOps Pipeline"/>
+
+    <meta property="og:title" content="Run Terraform with remote TFE backend in Azure DevOps Pipeline" />
+<meta property="og:description" content="Run Terraform with remote TFE backend in Azure DevOps Pipeline" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ringoc.github.io/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/" />
+<meta property="article:published_time" content="2021-01-20T21:25:59+11:00" />
+<meta property="article:modified_time" content="2021-01-20T21:25:59+11:00" />
+
+
+    <title>
+  Run Terraform with remote TFE backend in Azure DevOps Pipeline · Ringo Chan
+</title>
+
+    
+      <link rel="canonical" href="http://ringoc.github.io/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/">
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
+      integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.min.css">
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.f01c647a0d25b40da992a37c3376291185eed8a50ced8c26cc2c0bcfe38c97df.css" integrity="sha256-8Bxkeg0ltA2pkqN8M3YpEYXu2KUM7YwmzCwLz&#43;OMl98=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.126ad3988d46bdae6217a11105b53c9662bca05f39d42d3c0fb366919d334620.css" integrity="sha256-EmrTmI1Gva5iF6ERBbU8lmK8oF851C08D7NmkZ0zRiA=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+      <script defer src="https://twemoji.maxcdn.com/v/13.0.1/twemoji.min.js"
+        integrity="sha384-5f4X0lBluNY/Ib4VhGx0Pf6iDCF99VGXJIyYy7dDLY5QlEd7Ap0hICSSZA1XYbc4" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.80.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Ringo Chan
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Run Terraform with remote TFE backend in Azure DevOps Pipeline</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-01-20T21:25:59&#43;11:00'>
+                January 20, 2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          <div class="authors">
+    <i class="fa fa-user" aria-hidden="true"></i>
+      <a href="/authors/ringoc/">ringoc</a></div>
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/cloud/">cloud</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <a href="/tags/terraform/">terraform</a>
+      <span class="separator">•</span>
+    <a href="/tags/azure-pipeline/">azure pipeline</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="background">Background</h2>
+<p>Recently I worked in a project in large enterprise cloud migration project which using Azure DevOps Pipeline (YAML) as the core CD/CI pipeline which integrate Github repository as the source of truth, Terraform Enterprise workspace performing the IaC workload and Azure AD for IAM.</p>
+<p>There are a number of benefits:</p>
+<ol>
+<li>
+<p>Cloud-native approach with Terraform with massive number of providers</p>
+</li>
+<li>
+<p>Enjoy all benefits TFE offered e.g. collaboration, security, policy, and governance</p>
+</li>
+<li>
+<p>TFE exclusive feature e.g. Sentinel and ServiceNOW integration</p>
+</li>
+<li>
+<p>Encapsulate the complexity if TFE from Ops and Application teams</p>
+</li>
+</ol>
+<p>However, there are plenty of example in internet demostrating how to run Terraform with marketplace tasks with Azure Storage as the backend but not with TFE backend. I thought it would be good to share my work to others. Hopefully this would give others some insights.</p>
+<h2 id="challenges">Challenges</h2>
+<p>If you have tried running Terraform code with <a href="https://www.terraform.io/docs/backends/types/remote.html">TFE remote backend</a>, there are a couple of thing needed to be kept in mind.</p>
+<ol>
+<li>
+<p>Running Terraform job with TFE remote backend, it packaged up all files in current folder and upload to TFE workspace.</p>
+</li>
+<li>
+<p>Terraform workspace version SHOULD be the same Terrafrom runtime version in the build agent in Azure Pipeline</p>
+</li>
+<li>
+<p>Hence, no runtime variables is supported</p>
+</li>
+<li>
+<p>Use token from <a href="https://www.terraform.io/docs/commands/cli-config.html">CLI configuration files</a></p>
+</li>
+</ol>
+<h2 id="solutions">Solutions</h2>
+<p>With the above assumptions, the following steps are required.</p>
+<ol>
+<li>
+<p>Checkout Github source code</p>
+</li>
+<li>
+<p>Retrieve TFE workspace Terraform version</p>
+</li>
+<li>
+<p>Install custom Terraform runtime with version matching TFE workspace version</p>
+</li>
+<li>
+<p>Generate Terraform CLI configuration file and backend config</p>
+</li>
+<li>
+<p>Initialize Terraform with custom backend config</p>
+</li>
+<li>
+<p>Apply Terraform with custom backend config</p>
+</li>
+</ol>
+<h2 id="step-1--retrieve-tfe-workspace-terraform-version">Step 1 — Retrieve TFE workspace Terraform version</h2>
+<p>As the Azure DevOps pipeline built-in Terraform task is always keep up to date, this may not match the Terraform Enterprise workspace version. It is the best to use the same version of Terraform between the runtime and workspace. To retrieve the <a href="https://www.terraform.io/docs/cloud/api/workspaces.html">Terraform workspace version</a>, we can fire up a CURL command in BASH with correct HTTP header. The return JSON will then selected by jq . e.g.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sS --insecure <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>         --header <span style="color:#0ff;font-weight:bold">&#34;Authorization: Bearer &lt;tfeToken&gt;&#34;</span> <span style="color:#0ff;font-weight:bold">\ </span>
+         --header <span style="color:#0ff;font-weight:bold">&#34;Content-Type: application/vnd.api+json&#34;</span> <span style="color:#0ff;font-weight:bold">\ </span>   
+         <span style="color:#0ff;font-weight:bold">&#34;https://&lt;tfeHost&gt;/api/v2/organizations/&lt;tfeOrg&gt;/workspaces/&lt;tfeWorkspace&gt;&#34;</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>    | jq -r <span style="color:#0ff;font-weight:bold">&#39;.data.attributes[&#34;terraform-version&#34;]&#39;</span>
+
+</code></pre></div><p>We stored the version in the local variable and then pass it to the next step.</p>
+<h2 id="step-2--install-terraform-version-matching-workspace-version">Step 2 — Install Terraform version matching workspace version</h2>
+<p>Once the version is found, call a TerraformInstall task to install custom Terraform runtime.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="font-weight:bold">task</span>: TerraformInstaller@0     
+<span style="font-weight:bold">displayName</span>: <span style="color:#0ff;font-weight:bold">&#39;Install Terraform&#39;</span>     
+<span style="font-weight:bold">inputs</span>:       
+  <span style="font-weight:bold">terraformVersion</span>: &lt;tfVersion&gt;
+</code></pre></div><h2 id="step-3--generate-terraform-cli-config-and-backend-config">Step 3 – Generate Terraform CLI config and backend config</h2>
+<p>Since running Terraform remote backend, there are a few limitations:</p>
+<ul>
+<li>
+<p>Runtime variable is not supported</p>
+</li>
+<li>
+<p>Plan file output is not supported</p>
+</li>
+</ul>
+<p>We need to dynamically generate the CLI and backend config on the fly by replacing the TFE host, organization, workspace prefix in the backend config. and TFE host and token in the CLI config.</p>
+<p><em>.config/backend.hcl</em></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">hostname     = &#34;__tfeHost__&#34;
+organization = &#34;__tfeOrg__&#34;
+workspaces  {
+  prefix = &#34;__tla__-&#34;
+}
+</code></pre></div><p><em>.config/credentials.tfrc.json</em></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">{
+  <span style="font-weight:bold">&#34;credentials&#34;: </span>{
+    <span style="font-weight:bold">&#34;__tfeHost__&#34;: </span>{
+      <span style="font-weight:bold">&#34;token&#34;: </span><span style="color:#0ff;font-weight:bold">&#34;__tfeToken__&#34;</span>
+    }
+  }
+}
+</code></pre></div><p><em>azure-pipeline.yaml</em></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="font-weight:bold">bash</span>: |       
+  cp ./tf/env/&lt;env&gt;.auto.tfvars ./tf    
+  sed -i &#39;s/__tfeHost__/&lt;tfeHost&gt;/&#39; ./tf/.config/backend.hcl       
+  sed -i &#39;s/__tfeOrg__/&lt;tfeOrg&gt;/&#39; ./tf/.config/backend.hcl       
+  sed -i &#39;s/__tfeWorkspace__/&lt;tfeWorkspace&gt;/&#39; ./tf/.config/backend.hcl       
+  sed -i &#39;s/__tfeHost__/&lt;tfeHost&gt;/&#39; ./tf/.config/credentials.tfrc.json         
+  sed -i &#39;s/__tfeToken__/&lt;tfeToken&gt;/&#39;            ./tf/.config/credentials.tfrc.json     
+<span style="font-weight:bold">displayName</span>: <span style="color:#0ff;font-weight:bold">&#39;Create TF CLI Config File&#39;</span>     
+<span style="font-weight:bold">env</span>:       
+  <span style="font-weight:bold">TFE_TOKEN</span>: &lt;tfToken&gt; <span style="color:#007f7f"># passed as secret variables</span>
+</code></pre></div><h2 id="step-4--terraform-init-with-backend-config">Step 4 – Terraform init with backend config</h2>
+<p>Once CLI and backend config is generated. Run terraform init with custom backend config, and a couple of runtime variables.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="font-weight:bold">bash</span>: |       
+  DIRECTORY=&#34;./tf&#34;       
+  cd $DIRECTORY       
+  TF_WORKSPACE=&lt;tfeWorkspace&gt; \
+  TF_CLI_CONFIG_FILE=.config/credentials.tfrc.json \
+  terraform init -backend-config=.config/backend.hcl     
+<span style="font-weight:bold">displayName</span>: <span style="color:#0ff;font-weight:bold">&#39;TFE Init&#39;</span>\
+</code></pre></div><h2 id="step-5--terraform-apply-with-correct-cli-and-backend-config">Step 5 – Terraform apply with correct CLI and backend config</h2>
+<p>Same for applying the terraform</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="font-weight:bold">bash</span>: |       
+  DIRECTORY=&#34;./tf&#34;       
+  cd $DIRECTORY       
+  TF_WORKSPACE=&lt;tfeWorkspace&gt; \    
+  TF_CLI_CONFIG_FILE=.config/credentials.tfrc.json \
+  terraform plan 
+  TF_WORKSPACE=&lt;tfeWorkspace&gt; \
+  TF_CLI_CONFIG_FILE=./.config/credentials.tfrc.json \
+  terraform show -json &gt; output-state.json       
+  cat output-state.json | jq &#39;.&#39; | less     
+<span style="font-weight:bold">displayName</span>: <span style="color:#0ff;font-weight:bold">&#39;TFE Apply&#39;</span>
+</code></pre></div><h2 id="step-6--archive-the-plan-as-an-artifact">Step 6 – Archive the plan as an artifact</h2>
+<p>As a requirement for change management, the plan/apply output are exported and packaged up as a GZIP file.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="font-weight:bold">task</span>: ArchiveFiles@2     
+  <span style="font-weight:bold">inputs</span>:       
+    <span style="font-weight:bold">rootFolderOrFile</span>: <span style="color:#0ff;font-weight:bold">&#39;$(Build.SourcesDirectory)&#39;</span>            
+    <span style="font-weight:bold">includeRootFolder</span>: <span style="color:#fff;font-weight:bold">false</span>       
+    <span style="font-weight:bold">archiveType</span>: <span style="color:#0ff;font-weight:bold">&#39;tar&#39;</span>       
+    <span style="font-weight:bold">tarCompression</span>: <span style="color:#0ff;font-weight:bold">&#39;gz&#39;</span>       
+    <span style="font-weight:bold">archiveFile</span>: <span style="color:#0ff;font-weight:bold">&#39;$(Build.ArtifactStagingDirectory)/$(Build.BuildId).tfplan.tgz&#39;</span>       
+    <span style="font-weight:bold">replaceExistingArchive</span>: <span style="color:#fff;font-weight:bold">true</span>       
+<span style="font-weight:bold">displayName</span>: <span style="color:#0ff;font-weight:bold">&#39;Create Plan Artifact&#39;</span>
+</code></pre></div><h2 id="step-7--publish-to-the-artifact-container">Step 7 – Publish to the artifact container</h2>
+<p>Once the GZIP is created, publish to Azure DevOps artifact</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="font-weight:bold">task</span>: PublishBuildArtifacts@1     
+  <span style="font-weight:bold">inputs</span>:       
+    <span style="font-weight:bold">PathtoPublish</span>: <span style="color:#0ff;font-weight:bold">&#39;$(Build.ArtifactStagingDirectory)&#39;</span>       
+    <span style="font-weight:bold">ArtifactName</span>: <span style="color:#0ff;font-weight:bold">&#39;$(Build.BuildId).tf.enterprise.plan&#39;</span>           
+    <span style="font-weight:bold">publishLocation</span>: <span style="color:#0ff;font-weight:bold">&#39;Container&#39;</span>       
+<span style="font-weight:bold">displayName</span>: <span style="color:#0ff;font-weight:bold">&#39;Publish Plan Artifact&#39;</span>
+</code></pre></div><h2 id="summary">Summary</h2>
+<p>Now if you run the pipeline, it should go through tall the above steps. And the TFE workspace should be triggered by the pipeline task. However the workflow is infrastructure lead will review the plan in TFE workspace and confirm the plan by clicking on the Confirm button. Also, any change management can be referenced by TFE workspace history and the Azure artifact stored in Azure Pipeline.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Clarity, Consistency and Completion</p>
+      
+      
+        ©
+        
+          2019 -
+        
+        2021
+         Ringo Chan 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
+      
+    
+
+    
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+    <script async defer data-domain="example.com" src="https://analytics.example.com/js/plausible.js"></script>
+
+
+    <script data-goatcounter="https://code.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+
+    
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "token"}'></script>
+
+
+  </body>
+
+</html>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Ringo Chan</title>
-    <link>http://ringoc.github.io/posts/</link>
-    <description>Recent content in Posts on Ringo Chan</description>
+    <title>cloud on Ringo Chan</title>
+    <link>http://ringoc.github.io/categories/cloud/</link>
+    <description>Recent content in cloud on Ringo Chan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Jan 2021 21:25:59 +1100</lastBuildDate><atom:link href="http://ringoc.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Jan 2021 21:25:59 +1100</lastBuildDate><atom:link href="http://ringoc.github.io/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Run Terraform with remote TFE backend in Azure DevOps Pipeline</title>
       <link>http://ringoc.github.io/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</link>
@@ -17,16 +17,6 @@
 There are a number of benefits:
   Cloud-native approach with Terraform with massive number of providers
   Enjoy all benefits TFE offered e.g. collaboration, security, policy, and governance</description>
-    </item>
-    
-    <item>
-      <title>New Year New Blog</title>
-      <link>http://ringoc.github.io/posts/new-year-new-blog/</link>
-      <pubDate>Sun, 17 Jan 2021 12:02:05 +0000</pubDate>
-      
-      <guid>http://ringoc.github.io/posts/new-year-new-blog/</guid>
-      <description>2020 has been a very special and challenging year. By working remotely throughout the year, a lot of thing has been changed such as new working environment, new projects, and most importantly new work-life balance. I am very lucky to find this work very well myself.
-Not only I can work much more productive, but also have chance to take a pause to think out of the box. I found myself more outgoing and enjoy sharing my knowledge and experience.</description>
     </item>
     
   </channel>
