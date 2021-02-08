@@ -2,51 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ringo Chan</title>
-    <link>http://ringoc.github.io/</link>
+    <link>http://chanwingfung.com/</link>
     <description>Recent content on Ringo Chan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Jan 2021 21:25:59 +1100</lastBuildDate><atom:link href="http://ringoc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Jan 2021 11:53:51 +1100</lastBuildDate><atom:link href="http://chanwingfung.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Run Terraform with remote TFE backend in Azure DevOps Pipeline</title>
-      <link>http://ringoc.github.io/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</link>
-      <pubDate>Wed, 20 Jan 2021 21:25:59 +1100</pubDate>
+      <title></title>
+      <link>http://chanwingfung.com/posts/my-2nd-post/</link>
+      <pubDate>Sat, 16 Jan 2021 11:53:51 +1100</pubDate>
       
-      <guid>http://ringoc.github.io/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</guid>
-      <description>Background Recently I worked in a project in large enterprise cloud migration project which using Azure DevOps Pipeline (YAML) as the core CD/CI pipeline which integrate Github repository as the source of truth, Terraform Enterprise workspace performing the IaC workload and Azure AD for IAM.
-There are a number of benefits:
-  Cloud-native approach with Terraform with massive number of providers
-  Enjoy all benefits TFE offered e.g. collaboration, security, policy, and governance</description>
+      <guid>http://chanwingfung.com/posts/my-2nd-post/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Brand new blog</title>
-      <link>http://ringoc.github.io/projects/blog/</link>
-      <pubDate>Sun, 17 Jan 2021 12:08:54 +0000</pubDate>
+      <title>Contact</title>
+      <link>http://chanwingfung.com/contact/</link>
+      <pubDate>Mon, 28 Dec 2020 12:24:57 +1100</pubDate>
       
-      <guid>http://ringoc.github.io/projects/blog/</guid>
-      <description>Setting up new blog with Github and Golang </description>
-    </item>
-    
-    <item>
-      <title>New Year New Blog</title>
-      <link>http://ringoc.github.io/posts/new-year-new-blog/</link>
-      <pubDate>Sun, 17 Jan 2021 12:02:05 +0000</pubDate>
-      
-      <guid>http://ringoc.github.io/posts/new-year-new-blog/</guid>
-      <description>2020 has been a very special and challenging year. By working remotely throughout the year, a lot of thing has been changed such as new working environment, new projects, and most importantly new work-life balance. I am very lucky to find this work very well myself.
-Not only I can work much more productive, but also have chance to take a pause to think out of the box. I found myself more outgoing and enjoy sharing my knowledge and experience.</description>
+      <guid>http://chanwingfung.com/contact/</guid>
+      <description>Advertisement :)
+ pica - high quality and fast image resize in browser. babelfish - developer friendly i18n with plurals support and easy syntax.  You will like those projects!
+ h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules    Typographic replacements Enable typographer option to see result.
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+test.. test&amp;hellip; test&amp;hellip;.. test?</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://ringoc.github.io/about/</link>
+      <link>http://chanwingfung.com/about/</link>
       <pubDate>Mon, 28 Dec 2020 12:24:02 +1100</pubDate>
       
-      <guid>http://ringoc.github.io/about/</guid>
-      <description>Hello ! My name is Ringo Chan. I am a software engineer focus on DevOps and cloud-native technology. Most of my work is open source and publicly available on GitHub. You can follow me on Twitter where I mostly tweet about my projects and DevOps technologies.
-If you happen to speak Chinese, my Chinese name is 陳詠鋒. You can also find me on 微博 and 知乎.
-Outside of programming and helping my wife take care of our 3 kids, I enjoy playing table tennis, swimming, bushwalking, karaoke and tinkering around my home.</description>
+      <guid>http://chanwingfung.com/about/</guid>
+      <description>Advertisement :)
+ pica - high quality and fast image resize in browser. babelfish - developer friendly i18n with plurals support and easy syntax.  You will like those projects!
+ h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules    Typographic replacements Enable typographer option to see result.
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+test.. test&amp;hellip; test&amp;hellip;.. test?</description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>http://chanwingfung.com/posts/test/</link>
+      <pubDate>Mon, 28 Dec 2020 12:18:05 +1100</pubDate>
+      
+      <guid>http://chanwingfung.com/posts/test/</guid>
+      <description>Advertisement :)
+ pica - high quality and fast image resize in browser. babelfish - developer friendly i18n with plurals support and easy syntax.  You will like those projects!
+ h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules    Typographic replacements Enable typographer option to see result.
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+test.. test&amp;hellip; test&amp;hellip;.. test?</description>
     </item>
     
   </channel>
