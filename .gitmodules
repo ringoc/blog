@@ -2,3 +2,9 @@
 	path = public
 	url = https://github.com/ringoc/ringoc.github.io.git
 	branch = main
+[submodule "themes/fuji"]
+	path = themes/fuji
+	url = https://github.com/amzrk2/hugo-theme-fuji.git
+[submodule "themes/cactus"]
+	path = themes/cactus
+	url = https://github.com/monkeyWzr/hugo-theme-cactus.git
