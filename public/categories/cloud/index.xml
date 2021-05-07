@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on ringoc blog</title>
-    <link>https://www.ringoc.com/posts/</link>
-    <description>Recent content in Posts on ringoc blog</description>
+    <title>cloud on ringoc blog</title>
+    <link>https://www.ringoc.com/categories/cloud/</link>
+    <description>Recent content in cloud on ringoc blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Athul</copyright>
-    <lastBuildDate>Wed, 20 Jan 2021 21:25:59 +1100</lastBuildDate><atom:link href="https://www.ringoc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Jan 2021 21:25:59 +1100</lastBuildDate><atom:link href="https://www.ringoc.com/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Run Terraform with remote TFE backend in Azure DevOps Pipeline</title>
       <link>https://www.ringoc.com/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</link>
@@ -18,16 +18,6 @@
 There are a number of benefits:
   Cloud-native approach with Terraform with massive number of providers
   Enjoy all benefits TFE offered e.g. collaboration, security, policy, and governance</description>
-    </item>
-    
-    <item>
-      <title>New Year New Blog</title>
-      <link>https://www.ringoc.com/posts/new-year-new-blog/</link>
-      <pubDate>Sun, 17 Jan 2021 12:02:05 +0000</pubDate>
-      
-      <guid>https://www.ringoc.com/posts/new-year-new-blog/</guid>
-      <description>2020 has been a very special and challenging year. By working remotely throughout the year, a lot of thing has been changed such as new working environment, new projects, and most importantly new work-life balance. I am very lucky to find this work very well myself.
-Not only I can work much more productive, but also have chance to take a pause to think out of the box. I found myself more outgoing and enjoy sharing my knowledge and experience.</description>
     </item>
     
   </channel>

@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Ringo Chan</title>
-    <link>http://chanwingfung.com/categories/</link>
-    <description>Recent content in Categories on Ringo Chan</description>
+    <title>Categories on ringoc blog</title>
+    <link>https://www.ringoc.com/categories/</link>
+    <description>Recent content in Categories on ringoc blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://chanwingfung.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>© Athul</copyright>
+    <lastBuildDate>Wed, 20 Jan 2021 21:25:59 +1100</lastBuildDate><atom:link href="https://www.ringoc.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cloud</title>
+      <link>https://www.ringoc.com/categories/cloud/</link>
+      <pubDate>Wed, 20 Jan 2021 21:25:59 +1100</pubDate>
+      
+      <guid>https://www.ringoc.com/categories/cloud/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
