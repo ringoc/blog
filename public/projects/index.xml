@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on ringoc&#39;s blog</title>
-    <link>https://ringoc.github.io/projects/</link>
+    <link>https://www.ringoc.com/projects/</link>
     <description>Recent content in Projects on ringoc&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>You</copyright>
-    <lastBuildDate>Sun, 17 Jan 2021 12:08:54 +0000</lastBuildDate><atom:link href="https://ringoc.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jan 2021 12:08:54 +0000</lastBuildDate><atom:link href="https://www.ringoc.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Brand new blog</title>
-      <link>https://ringoc.github.io/projects/blog/</link>
+      <link>https://www.ringoc.com/projects/blog/</link>
       <pubDate>Sun, 17 Jan 2021 12:08:54 +0000</pubDate>
       
-      <guid>https://ringoc.github.io/projects/blog/</guid>
+      <guid>https://www.ringoc.com/projects/blog/</guid>
       <description>Setting up new blog with Github and Golang </description>
     </item>
     

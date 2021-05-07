@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cloud on ringoc&#39;s blog</title>
-    <link>https://ringoc.github.io/categories/cloud/</link>
+    <link>https://www.ringoc.com/categories/cloud/</link>
     <description>Recent content in cloud on ringoc&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>You</copyright>
-    <lastBuildDate>Wed, 20 Jan 2021 21:25:59 +1100</lastBuildDate><atom:link href="https://ringoc.github.io/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Jan 2021 21:25:59 +1100</lastBuildDate><atom:link href="https://www.ringoc.com/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Run Terraform with remote TFE backend in Azure DevOps Pipeline</title>
-      <link>https://ringoc.github.io/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</link>
+      <link>https://www.ringoc.com/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</link>
       <pubDate>Wed, 20 Jan 2021 21:25:59 +1100</pubDate>
       
-      <guid>https://ringoc.github.io/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</guid>
+      <guid>https://www.ringoc.com/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</guid>
       <description>Background Recently I worked in a project in large enterprise cloud migration project which using Azure DevOps Pipeline (YAML) as the core CD/CI pipeline which integrate Github repository as the source of truth, Terraform Enterprise workspace performing the IaC workload and Azure AD for IAM.
 There are a number of benefits:
   Cloud-native approach with Terraform with massive number of providers
