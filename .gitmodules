@@ -1,6 +1,6 @@
-[submodule "themes/hugo-coder"]
-	path = themes/hugo-coder
-	url = https://github.com/luizdepra/hugo-coder.git
+[submodule "themes/archie"]
+	path = themes/archie
+	url = https://github.com/lathul/archie.git
 [submodule "public"]
 	path = public
 	url = https://github.com/ringoc/ringoc.github.io.git
