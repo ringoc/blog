@@ -1,6 +1,6 @@
 baseURL = "https://ringoc.github.io"
 languageCode = "en-us"
-title = "Cactus theme example"
+title = "ringoc's blog"
 theme = "cactus"
 copyright = "You" # cactus will use title if copyright is not set
 disqusShortname = "example" # Used when comments is enabled. Cactus will use site title if not set
