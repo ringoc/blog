@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on ringoc blog</title>
-    <link>https://www.ringoc.com/posts/</link>
-    <description>Recent content in Posts on ringoc blog</description>
+    <title>Posts on Cactus theme example</title>
+    <link>https://example.com/posts/</link>
+    <description>Recent content in Posts on Cactus theme example</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Athul</copyright>
-    <lastBuildDate>Wed, 20 Jan 2021 21:25:59 +1100</lastBuildDate><atom:link href="https://www.ringoc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>You</copyright>
+    <lastBuildDate>Wed, 20 Jan 2021 21:25:59 +1100</lastBuildDate><atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Run Terraform with remote TFE backend in Azure DevOps Pipeline</title>
-      <link>https://www.ringoc.com/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</link>
+      <link>https://example.com/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</link>
       <pubDate>Wed, 20 Jan 2021 21:25:59 +1100</pubDate>
       
-      <guid>https://www.ringoc.com/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</guid>
+      <guid>https://example.com/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</guid>
       <description>Background Recently I worked in a project in large enterprise cloud migration project which using Azure DevOps Pipeline (YAML) as the core CD/CI pipeline which integrate Github repository as the source of truth, Terraform Enterprise workspace performing the IaC workload and Azure AD for IAM.
 There are a number of benefits:
   Cloud-native approach with Terraform with massive number of providers
@@ -22,10 +22,10 @@ There are a number of benefits:
     
     <item>
       <title>New Year New Blog</title>
-      <link>https://www.ringoc.com/posts/new-year-new-blog/</link>
+      <link>https://example.com/posts/new-year-new-blog/</link>
       <pubDate>Sun, 17 Jan 2021 12:02:05 +0000</pubDate>
       
-      <guid>https://www.ringoc.com/posts/new-year-new-blog/</guid>
+      <guid>https://example.com/posts/new-year-new-blog/</guid>
       <description>2020 has been a very special and challenging year. By working remotely throughout the year, a lot of thing has been changed such as new working environment, new projects, and most importantly new work-life balance. I am very lucky to find this work very well myself.
 Not only I can work much more productive, but also have chance to take a pause to think out of the box. I found myself more outgoing and enjoy sharing my knowledge and experience.</description>
     </item>
