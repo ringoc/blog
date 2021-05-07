@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Cactus theme example</title>
-    <link>https://example.com/projects/</link>
+    <link>https://ringo.github.io/projects/</link>
     <description>Recent content in Projects on Cactus theme example</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>You</copyright>
-    <lastBuildDate>Sun, 17 Jan 2021 12:08:54 +0000</lastBuildDate><atom:link href="https://example.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jan 2021 12:08:54 +0000</lastBuildDate><atom:link href="https://ringo.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Brand new blog</title>
-      <link>https://example.com/projects/blog/</link>
+      <link>https://ringo.github.io/projects/blog/</link>
       <pubDate>Sun, 17 Jan 2021 12:08:54 +0000</pubDate>
       
-      <guid>https://example.com/projects/blog/</guid>
+      <guid>https://ringo.github.io/projects/blog/</guid>
       <description>Setting up new blog with Github and Golang </description>
     </item>
     
