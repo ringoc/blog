@@ -1,4 +1,4 @@
-baseURL = "https://www.ringoc.com"
+baseURL = "https://ringoc.com"
 languageCode = "en-us"
 title = "ringoc's blog"
 theme = "cactus"
