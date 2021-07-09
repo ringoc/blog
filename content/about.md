@@ -5,7 +5,7 @@ draft: false
 ---
 # Hello ! My name is Ringo Chan.
 
-I am a software engineer focus on DevOps and cloud-native technology. Most of my work is open source and publicly available on GitHub. You can follow me on Twitter where I mostly tweet about my projects and DevOps technologies.
+I am a cloud engineer focus on DevOps and cloud-native technology. Most of my work is open source and publicly available on GitHub. You can follow me on Twitter where I mostly tweet about my projects and DevOps technologies.
 
 If you happen to speak Chinese, my Chinese name is 陳詠鋒. You can also find me on 微博 and 知乎.
 
