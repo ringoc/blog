@@ -11,7 +11,7 @@ externalLink : ""
 series : []
 disableComments: true
 ---
-2020 has been a very special and challenging year. By working remotely throughout the year, a lot of thing has been changed such as new working environment, new projects, and most importantly new work-life balance.
+2020 was a very special and challenging year. By working remotely throughout the year, a lot of thing has been changed such as new working environment, new projects, and most importantly new work-life balance.
 I am very lucky to find this work very well myself. 
 
 Not only I can work much more productive, but also have chance to take a pause to think out of the box. I found myself more outgoing and enjoy sharing my knowledge and experience. To be able to better present myself is one of the best gain in 2020. 
