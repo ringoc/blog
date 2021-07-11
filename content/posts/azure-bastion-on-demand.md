@@ -21,7 +21,7 @@ In the Azure cloud environment, accessing your resources e.g. VM through SSH/RDP
 
 # Challenge
 However, the cost of Azure Bastion is not cheap. It added up to near $200 Australian Dollar per months not counting the outgoing traffic. 
-![Azure Bastion Pricing](../../images/bastion/azure-bastion-pricing.png) <!-- .element height="50%" width="50%" -->
+![Azure Bastion Pricing](./images/bastion/azure-bastion-pricing.png) <!-- .element height="50%" width="50%" -->
 Of course one can delete the Azure Bastion at the end of the day. And keep spinning up a new one the next day. After a few times, you may feel sick of it at least for me. I need to think of a way to automcate this process. 
 
 ## Solution
@@ -31,18 +31,18 @@ Here are the steps:
 
 ### Create Login App for `createBastionByEmail` 
 
-![Create Bastion by Email](../../images/bastion/create-bastion-by-email-email.png)
+![Create Bastion by Email](./images/bastion/create-bastion-by-email-email.png)
 
-![Create Bastion by Email](../../images/bastion/create-bastion-by-email-http.png)
+![Create Bastion by Email](./images/bastion/create-bastion-by-email-http.png)
 
-![Create Bastion by Email](../../images/bastion/create-bastion-by-email-output.png)
+![Create Bastion by Email](./images/bastion/create-bastion-by-email-output.png)
 user@example.com
 
 
 ### 2. Create Login App for `deleteBastionBySchedule` 
 
-![Create Bastion by Email](../../images/bastion/delete-bastion-1.png)
-![Create Bastion by Email](../../images/bastion/delete-bastion-2.png)
-![Create Bastion by Email](../../images/bastion/delete-bastion-3.png)
-![Create Bastion by Email](../../images/bastion/delete-bastion-4.png)
-![Create Bastion by Email](../../images/bastion/delete-bastion-5.png)
+![Create Bastion by Email](./images/bastion/delete-bastion-1.png)
+![Create Bastion by Email](./images/bastion/delete-bastion-2.png)
+![Create Bastion by Email](./images/bastion/delete-bastion-3.png)
+![Create Bastion by Email](./images/bastion/delete-bastion-4.png)
+![Create Bastion by Email](./images/bastion/delete-bastion-5.png)
