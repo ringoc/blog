@@ -1,15 +1,15 @@
 ---
-title: "Enable Redhat Golden Image BYOS in Azure"
+title:  "Enable Redhat Golden Image BYOS in Azure"
 date: 2022-01-08T11:55:28+11:00
-draft: false
-description = "How to enable RedHat Golden Image BYOS in Azure"
-slug = ""
-authors = ["ringoc"]
-tags = ["redhat","rhel","azure"]
-categories = ["cloud"]
-disableComments = true
-externalLink = ""
-series = []
+draft:  false
+description: "How to enable RedHat Golden Image BYOS in Azure"
+slug:""
+authors: ["ringoc"]
+tags: ["redhat","rhel","azure"]
+categories: ["cloud"]
+disableComments: true
+externalLink: ""
+series: []
 ---
 # What is this document?
 
