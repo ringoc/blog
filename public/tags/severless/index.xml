@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>severless on ringoc&#39;s blog</title>
+    <link>https://www.ringoc.com/tags/severless/</link>
+    <description>Recent content in severless on ringoc&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>ringoc</copyright>
+    <lastBuildDate>Fri, 09 Jul 2021 23:30:35 +1000</lastBuildDate><atom:link href="https://www.ringoc.com/tags/severless/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Bastion on Demand</title>
+      <link>https://www.ringoc.com/posts/azure-bastion-on-demand/</link>
+      <pubDate>Fri, 09 Jul 2021 23:30:35 +1000</pubDate>
+      
+      <guid>https://www.ringoc.com/posts/azure-bastion-on-demand/</guid>
+      <description>Background Internet opens up tons of possibility, but at the same time your properties can become vulunaerable for security breach. It is important for everyone to maintain highest level of security for their properties.
+In the Azure cloud environment, accessing your resources e.g. VM through SSH/RDP means you have to expose your port 22 or 3389 to the internet. One of the nice way is to use Azure Bastion.
+What is Azure Bastion ?</description>
+    </item>
+    
+  </channel>
+</rss>

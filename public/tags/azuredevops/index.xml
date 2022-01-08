@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>azuredevops on ringoc&#39;s blog</title>
+    <link>https://www.ringoc.com/tags/azuredevops/</link>
+    <description>Recent content in azuredevops on ringoc&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>ringoc</copyright>
+    <lastBuildDate>Wed, 20 Jan 2021 21:25:59 +1100</lastBuildDate><atom:link href="https://www.ringoc.com/tags/azuredevops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Run Terraform with remote TFE backend in Azure DevOps Pipeline</title>
+      <link>https://www.ringoc.com/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</link>
+      <pubDate>Wed, 20 Jan 2021 21:25:59 +1100</pubDate>
+      
+      <guid>https://www.ringoc.com/posts/terraform-with-remote-tfe-backend-in-azure-devops-pipeline/</guid>
+      <description>Background Recently I worked in a project in large enterprise cloud migration project which using Azure DevOps Pipeline (YAML) as the core CD/CI pipeline which integrate Github repository as the source of truth, Terraform Enterprise workspace performing the IaC workload and Azure AD for IAM.
+There are a number of benefits:
+  Cloud-native approach with Terraform with massive number of providers
+  Enjoy all benefits TFE offered e.g. collaboration, security, policy, and governance</description>
+    </item>
+    
+  </channel>
+</rss>
