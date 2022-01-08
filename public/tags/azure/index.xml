@@ -7,17 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>ringoc</copyright>
-    <lastBuildDate>Sat, 08 Jan 2022 11:55:28 +1100</lastBuildDate><atom:link href="https://www.ringoc.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Enable Redhat Golden Image BYOS in Azure</title>
-      <link>https://www.ringoc.com/posts/enable-redhat-golden-image-byos-azure/</link>
-      <pubDate>Sat, 08 Jan 2022 11:55:28 +1100</pubDate>
-      
-      <guid>https://www.ringoc.com/posts/enable-redhat-golden-image-byos-azure/</guid>
-      <description>What is this document? This document provides step by step instruction to enable Red Hat Golden Image with Bring-your-own-subscription (BYOS) in Azure by registering a Red Hat developer account.
-Create a Red Hat Account If you don&#39;t have a Red Hat account yet, go to Red Hat portal and register an account. You can use either MSFT corporate or personal. (It is recommended to use MSFT corporate account so that any other RHEL for Service Provider On Demand can be grouped into single place/account)</description>
-    </item>
-    
+    <lastBuildDate>Fri, 09 Jul 2021 23:30:35 +1000</lastBuildDate><atom:link href="https://www.ringoc.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure Bastion on Demand</title>
       <link>https://www.ringoc.com/posts/azure-bastion-on-demand/</link>
