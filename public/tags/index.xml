@@ -7,13 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>ringoc</copyright>
-    <lastBuildDate>Fri, 09 Jul 2021 23:30:35 +1000</lastBuildDate><atom:link href="https://www.ringoc.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jan 2022 11:55:28 +1100</lastBuildDate><atom:link href="https://www.ringoc.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>azure</title>
       <link>https://www.ringoc.com/tags/azure/</link>
-      <pubDate>Fri, 09 Jul 2021 23:30:35 +1000</pubDate>
+      <pubDate>Sat, 08 Jan 2022 11:55:28 +1100</pubDate>
       
       <guid>https://www.ringoc.com/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redhat</title>
+      <link>https://www.ringoc.com/tags/redhat/</link>
+      <pubDate>Sat, 08 Jan 2022 11:55:28 +1100</pubDate>
+      
+      <guid>https://www.ringoc.com/tags/redhat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rhel</title>
+      <link>https://www.ringoc.com/tags/rhel/</link>
+      <pubDate>Sat, 08 Jan 2022 11:55:28 +1100</pubDate>
+      
+      <guid>https://www.ringoc.com/tags/rhel/</guid>
       <description></description>
     </item>
     

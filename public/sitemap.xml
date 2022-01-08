@@ -2,17 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.ringoc.com/tags/azure/</loc>
+    <lastmod>2022-01-08T11:55:28+11:00</lastmod>
+  </url><url>
+    <loc>https://www.ringoc.com/categories/</loc>
+    <lastmod>2022-01-08T11:55:28+11:00</lastmod>
+  </url><url>
+    <loc>https://www.ringoc.com/categories/cloud/</loc>
+    <lastmod>2022-01-08T11:55:28+11:00</lastmod>
+  </url><url>
     <loc>https://www.ringoc.com/posts/enable-redhat-golden-image-byos-azure/</loc>
     <lastmod>2022-01-08T11:55:28+11:00</lastmod>
   </url><url>
     <loc>https://www.ringoc.com/posts/</loc>
     <lastmod>2022-01-08T11:55:28+11:00</lastmod>
   </url><url>
+    <loc>https://www.ringoc.com/tags/redhat/</loc>
+    <lastmod>2022-01-08T11:55:28+11:00</lastmod>
+  </url><url>
+    <loc>https://www.ringoc.com/tags/rhel/</loc>
+    <lastmod>2022-01-08T11:55:28+11:00</lastmod>
+  </url><url>
     <loc>https://www.ringoc.com/</loc>
     <lastmod>2022-01-08T11:55:28+11:00</lastmod>
   </url><url>
-    <loc>https://www.ringoc.com/tags/azure/</loc>
-    <lastmod>2021-07-09T23:30:35+10:00</lastmod>
+    <loc>https://www.ringoc.com/tags/</loc>
+    <lastmod>2022-01-08T11:55:28+11:00</lastmod>
   </url><url>
     <loc>https://www.ringoc.com/posts/azure-bastion-on-demand/</loc>
     <lastmod>2021-07-09T23:30:35+10:00</lastmod>
@@ -20,22 +35,13 @@
     <loc>https://www.ringoc.com/tags/bastion/</loc>
     <lastmod>2021-07-09T23:30:35+10:00</lastmod>
   </url><url>
-    <loc>https://www.ringoc.com/categories/</loc>
-    <lastmod>2021-07-09T23:30:35+10:00</lastmod>
-  </url><url>
     <loc>https://www.ringoc.com/tags/cloud/</loc>
-    <lastmod>2021-07-09T23:30:35+10:00</lastmod>
-  </url><url>
-    <loc>https://www.ringoc.com/categories/cloud/</loc>
     <lastmod>2021-07-09T23:30:35+10:00</lastmod>
   </url><url>
     <loc>https://www.ringoc.com/tags/logicapp/</loc>
     <lastmod>2021-07-09T23:30:35+10:00</lastmod>
   </url><url>
     <loc>https://www.ringoc.com/tags/severless/</loc>
-    <lastmod>2021-07-09T23:30:35+10:00</lastmod>
-  </url><url>
-    <loc>https://www.ringoc.com/tags/</loc>
     <lastmod>2021-07-09T23:30:35+10:00</lastmod>
   </url><url>
     <loc>https://www.ringoc.com/tags/azuredevops/</loc>
